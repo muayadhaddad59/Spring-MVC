@@ -21,12 +21,21 @@
      Country:
 
      <select th:field="*{country}">
-
          <option th:each="tempCountry: ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
      </select>
 
      <br><br>
-    <input type="submit" value="Submit"/>
+
+     Favorite Programming Language
+     <input type="radio" th:field="*{favoriteLanguage}" th:each="tempLang: ${languages}" th:value="${tempLang}" th:text="${tempLang}"/>
+     <br><br>
+
+     Favorite Operating Systems:
+     <input type="checkbox" th:field="*{favoriteSystems}" th:each="tempSystems: ${systems}" th:value="${tempSystem}" th:text="${tempSystems}"/>
+
+
+     <br><br>
+     <input type="submit" value="Submit"/>
 </form>
 </body>
 </html>
